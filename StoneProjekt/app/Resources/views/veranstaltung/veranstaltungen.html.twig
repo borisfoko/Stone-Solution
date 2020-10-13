@@ -1,0 +1,38 @@
+{# page1.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %} Veranstaltungen {% endblock %}
+
+{% block body %}
+    <div class="under-container">
+    <h2>Liste aller Veranstaltungen</h2>
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+            <th>Veranstaltungsnummer</th>
+            <th>Beschreibung</th>
+            <th>Studiengang</th>
+            <th>Start Datum</th>
+            <th>End Datum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">ST678</th>
+                <td>StahlBau 1</td>
+                <td>BauIngenieurWesen</td>
+                <td>22.3.2018</td>
+                <td>22.9.2018</td>
+            </tr>
+            <tr>
+                <th scope="row">EI678</th>
+                <td>Einführung in die Informatik</td>
+                <td>BauIngenieurWesen</td>
+                <td>22.3.2018</td>
+                <td>22.9.2018</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+https://bootsnipp.com/snippets/g0ZNM
+https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_modal&stacked=h
+https://auth0.com/blog/creating-your-first-symfony-app-and-adding-authentification/
+https://zestedesavoir.com/tutoriels/1280/creez-une-api-rest-avec-symfony-3/

@@ -1,0 +1,24 @@
+StoneProjekt/.web-server-pid
+StoneProjekt/app/config/parameters.yml
+StoneProjekt/build/
+StoneProjekt/phpunit.xml
+StoneProjekt/var/*
+!StoneProjekt/var/cache
+StoneProjekt/var/cache/*
+!StoneProjekt/var/cache/.gitkeep
+StoneProjekt/var/logs
+StoneProjekt/var/logs/*
+!StoneProjekt/var/logs/.gitkeep
+StoneProjekt/var/sessions
+StoneProjekt/var/sessions/*
+!StoneProjekt/var/sessions/.gitkeep
+!StoneProjekt/var/SymfonyRequirements.php
+StoneProjekt/vendor/
+StoneProjekt/web/bundles/
+Einrichtungsfehler/*
+StoneProjekt/Server Einstellung
+Einrichtungsfehler
+/Einrichtungsfehler/ping Test.PNG
+/Einrichtungsfehler/ProblemRDPEinrichtung.PNG
+/Einrichtungsfehler/ProblemVPN.PNG
+/Einrichtungsfehler/Unbenannt.PNG

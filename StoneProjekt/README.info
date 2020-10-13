@@ -1,0 +1,68 @@
+Projekt Configuration
+========================
+
+**1. Neues Symfony 3.4 Projekt anlegen**
+
+- install Conposer: 
+
+   Wir befinden uns im Ordner workspace
+   Als erstes laden wir das Programm composer mit curl herunter
+   Siehe auch http://getcomposer.org/download/
+   Diese Anweisung in der Konsole tippen
+   
+   **curl -s https://getcomposer.org/installer | php** 
+   
+- Jetzt legen wir ein neues Projekt an oder kopieren wir ein bestehendes Projekt in dem  "C:\xampp\htdocs" Ordner
+  +Projekt anlegen : **php composer.phar create-project symfony/framework-standard-edition StoneProjekt**
+  
+  Siehe auch http://symfony.com/doc/current/book/installation.html
+  Die Fragen für die Datei "parameters.yml" können mit drücken der Enter-Taste einfach bestätigt werden. 
+  
+  Anschließend verschieben wir die comphoser.phar Datei in das neu erstellte Projekt.
+  **mv composer.phar testprojekt**
+  
+**2. Apache Webserver einrichten**
+- VirtualHost Configuration
+  
+   Datei: C:\xampp\apache\conf\extra\httpd-vhosts.conf mit notepad++ öffnen
+   Folgenger Text am Ende einfügen:
+  
+    <VirtualHost *:80>
+      ServerName stone.f2.htw-berlin.de
+     
+      DocumentRoot "C:/xampp/htdocs/StoneProjekt/web"
+      DirectoryIndex index.php
+     
+      <Directory "C:/xampp/htdocs/StoneProjekt/web"> 
+        Require all granted
+        AllowOverride All
+        Allow from All
+        Options Indexes FollowSymLinks
+      </Directory> 
+    </VirtualHost>
+
+- ServerName in etc/Host definieren
+   Datei C:\Windows\System32\drivers\etc\hosts mit Notepad++ als admin öffnen
+   Zeile "::1    stone.f2.htw-berlin.de" einfügen
+   
+**3. MySQL Datenbank**
+
+-   Die Verbindungsdaten zur MySQL Datenbank werden in der Datei app/config/parameters.yml hinterlegt
+   // file: app/config/parameters.yml
+   parameters:
+       database_host: 127.0.0.1
+       database_port: null
+       database_name: testprojekt
+       database_user: username
+       database_password: kennwort
+       mailer_transport: smtp
+       mailer_host: 127.0.0.1
+       mailer_user: null
+       mailer_password: null
+       secret: ThisTokenIsNotSoSecretChangeIt
+
+**4. Install FOSUserBundle**
+
+   Dafür einfach der Tuto auf der Seite:
+   https://symfony.com/doc/master/bundles/FOSUserBundle/index.html
+   folgen.
